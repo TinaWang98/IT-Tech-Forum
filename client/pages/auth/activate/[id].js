@@ -27,7 +27,7 @@ const ActivateAccount = ({router}) => {
     const clickSubmit = async e => {
         e.preventDefault()
         //console.log('activate account')
-        setState({...state,buttonText:'Activated'})
+        setState({...state,buttonText:'Activating'})
         try{
             const response = await axios.post(`${API}/register/activate`,{token})
             //console.log('account activate response')
