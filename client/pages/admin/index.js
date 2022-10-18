@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic'
 const Layout = dynamic(() => import('../../components/Layout'),{ssr:false})
+import withAdmin from '../withAdmin'
 
-const Admin= () => {
-    return <Layout>hello Admin</Layout>
+const Admin= ({user,token}) => {
+    return <Layout>{JSON.stringify(user)}</Layout>
   }
   
-  export default Admin
+  export default withAdmin(Admin)
