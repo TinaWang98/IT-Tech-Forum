@@ -76,6 +76,9 @@ const Login= () => {
         {success && showSuccessMessage(success)}
         {error && showErrorMessage(error)}
         {loginform()}
+        <Link href="/auth/password/forgot">
+            <a className='text-danger float-right'>Forgot Password</a>
+        </Link>
       </div>
     </Layout>
     )
